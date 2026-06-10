@@ -52,12 +52,17 @@
     }
 
     .header-inner {
-      min-height: 64px;
+      min-height: 72px;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: space-between;
       gap: 1.5rem;
       padding: 0.35rem 0;
+    }
+
+    .logo-link img {
+      width: clamp(42px, 5vw, 72px);
+      height: auto;
     }
 
     .site-nav {
@@ -96,11 +101,6 @@
       padding: clamp(1.15rem, 2.2vw, 1.4rem) 0 clamp(2.25rem, 6vw, 4.5rem);
     }
 
-    .hero-logo {
-      width: clamp(66px, 8vw, 104px);
-      margin: 0 auto clamp(1.4rem, 3vw, 2rem);
-    }
-
     .home-copy {
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
@@ -135,9 +135,13 @@
       }
 
       .header-inner {
-        min-height: 58px;
+        min-height: 64px;
         gap: 1rem;
         padding: 0.3rem 0;
+      }
+
+      .logo-link img {
+        width: clamp(40px, 16vw, 60px);
       }
 
       .site-nav {
@@ -146,11 +150,6 @@
 
       .site-nav a {
         font-size: 0.66rem;
-      }
-
-      .hero-logo {
-        width: clamp(56px, 18vw, 82px);
-        margin-bottom: 1.25rem;
       }
 
       .home-copy p {
@@ -164,6 +163,9 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
+      <a class="logo-link" href="index.html" aria-label="Ground Up Records Home">
+        <img src="images/ground up 1 white transparent.png" alt="Ground Up Records" />
+      </a>
       <nav class="site-nav" aria-label="Main navigation">
         <a class="active" href="index.html">About</a>
         <a href="contact.html">Contact</a>
@@ -173,7 +175,6 @@
 
   <main>
     <section class="home-shell">
-      <img class="hero-logo" src="images/ground up 1 white transparent.png" alt="Ground Up Records" />
       <div class="home-copy">
         <p>Ground Up Records was founded on the belief that great music does not need permission. We are an independent label rooted in creative freedom, championing artists who care more about identity, honesty, and longevity than chasing the algorithm.</p>
         <p>Based in London, we work closely with a small and carefully chosen roster, offering hands-on support across recording, release strategy, distribution, and sustainable growth. Every project is personal to us, and every release is given the focus it deserves.</p>
