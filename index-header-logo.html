@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ground Up Records</title>
+  <meta
+    name="description"
+    content="Ground Up Records is a London-based independent label rooted in creative freedom, artist development, and meaningful releases."
+  />
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #ffffff;
+      --muted: #c9c9c9;
+      --accent: #f0f0f0;
+      --line: #2a2a2a;
+      --header-bg: rgba(0, 0, 0, 0.96);
+      --max: 1200px;
+      --content: 820px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Helvetica Neue", "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+
+    .container {
+      width: min(100% - 2.5rem, var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--header-bg);
+      backdrop-filter: blur(8px);
+    }
+
+    .header-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 0.35rem 0;
+    }
+
+    .logo-link img {
+      width: clamp(42px, 5vw, 72px);
+      height: auto;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(1.2rem, 2.2vw, 2rem);
+    }
+
+    .site-nav a {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #d4d4d4;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 0.18rem;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible,
+    .site-nav a.active {
+      color: var(--accent);
+      border-color: var(--accent);
+      outline: none;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .home-shell {
+      width: min(100% - 2.5rem, var(--content));
+      margin: 0 auto;
+      padding: clamp(1.15rem, 2.2vw, 1.4rem) 0 clamp(2.25rem, 6vw, 4.5rem);
+    }
+
+    .home-copy {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: clamp(1.6rem, 4vw, 2.4rem) 0;
+    }
+
+    .home-copy p {
+      text-align: justify;
+      color: var(--muted);
+      line-height: 1.84;
+      font-size: 1rem;
+      margin-top: 0.9rem;
+    }
+
+    .home-copy p:first-child {
+      margin-top: 0;
+    }
+
+    .site-footer {
+      padding: 1.05rem 0 1.25rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #a8a8a8;
+    }
+
+    @media (max-width: 640px) {
+      .container,
+      .home-shell {
+        width: min(100% - 1.5rem, var(--max));
+      }
+
+      .header-inner {
+        min-height: 64px;
+        gap: 1rem;
+        padding: 0.3rem 0;
+      }
+
+      .logo-link img {
+        width: clamp(40px, 16vw, 60px);
+      }
+
+      .site-nav {
+        gap: 0.95rem;
+      }
+
+      .site-nav a {
+        font-size: 0.66rem;
+      }
+
+      .home-copy p {
+        font-size: 0.97rem;
+        text-align: left;
+        line-height: 1.78;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo-link" href="index.html" aria-label="Ground Up Records Home">
+        <img src="images/ground up 1 white transparent.png" alt="Ground Up Records" />
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="active" href="index.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="home-shell">
+      <div class="home-copy">
+        <p>Ground Up Records was founded on the belief that great music does not need permission. We are an independent label rooted in creative freedom, championing artists who care more about identity, honesty, and longevity than chasing the algorithm.</p>
+        <p>Based in London, we work closely with a small and carefully chosen roster, offering hands-on support across recording, release strategy, distribution, and sustainable growth. Every project is personal to us, and every release is given the focus it deserves.</p>
+        <p>This is not a factory model and it is not built on volume. Ground Up is a community, shaped by trust, taste, and a shared commitment to making music that lasts.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© Ground Up Records</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Ground Up Records</title>
+  <meta name="description" content="Contact Ground Up Records in London." />
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #ffffff;
+      --accent: #f0f0f0;
+      --line: #2a2a2a;
+      --muted: #bcbcbc;
+      --max: 1200px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Helvetica Neue", "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+
+    .container {
+      width: min(100% - 2.5rem, var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(0, 0, 0, 0.96);
+      backdrop-filter: blur(8px);
+    }
+
+    .header-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 0.35rem 0;
+    }
+
+    .logo-link img {
+      width: clamp(58px, 8vw, 102px);
+      height: auto;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(1.2rem, 2.2vw, 2rem);
+    }
+
+    .site-nav a {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #d4d4d4;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 0.18rem;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible,
+    .site-nav a.active {
+      color: var(--accent);
+      border-color: var(--accent);
+      outline: none;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-body {
+      width: min(100% - 2.5rem, var(--max));
+      margin: 0 auto;
+      padding: clamp(2.5rem, 6vh, 5rem) 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-banner {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 720px;
+      justify-content: center;
+      gap: clamp(2rem, 4vh, 2.5rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: clamp(2rem, 5vh, 3rem) 0;
+    }
+
+    .contact-item {
+      flex: 1;
+      min-width: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-item-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+      transition: color 0.2s ease;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus-visible {
+      color: var(--accent);
+      outline: none;
+    }
+
+    .contact-icon {
+      width: 34px;
+      height: 34px;
+      stroke: #cfcfcf;
+      stroke-width: 1.7;
+      fill: none;
+      flex-shrink: 0;
+      transition: stroke 0.2s ease;
+    }
+
+    .contact-link:hover .contact-icon,
+    .contact-link:focus-visible .contact-icon {
+      stroke: var(--accent);
+    }
+
+    .contact-link:hover .contact-icon.is-filled,
+    .contact-link:focus-visible .contact-icon.is-filled {
+      fill: var(--accent);
+    }
+
+    .site-footer {
+      padding: 1.05rem 0 1.25rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #a8a8a8;
+    }
+
+    @media (max-width: 640px) {
+      .container,
+      .contact-body {
+        width: min(100% - 1.5rem, var(--max));
+      }
+
+      .header-inner {
+        min-height: 64px;
+        gap: 1rem;
+        padding: 0.3rem 0;
+      }
+
+      .logo-link img {
+        width: clamp(54px, 20vw, 84px);
+      }
+
+      .site-nav {
+        gap: 0.95rem;
+      }
+
+      .site-nav a {
+        font-size: 0.66rem;
+      }
+
+      .contact-banner {
+        gap: 1.5rem;
+        padding: 1.6rem 0 1.8rem;
+      }
+
+      .contact-item-label {
+        margin-bottom: 0.8rem;
+      }
+
+      .contact-icon {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo-link" href="index.html" aria-label="Ground Up Records Home">
+        <img src="images/ground up 1 white transparent.png" alt="Ground Up Records" />
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">About</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="contact-body">
+      <div class="contact-banner">
+        <div class="contact-item">
+          <span class="contact-item-label">Email</span>
+          <a class="contact-link" href="mailto:info@grounduprecords.co.uk" aria-label="Email Ground Up Records">
+            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 6.75h18v10.5H3z"></path>
+              <path d="m4.5 8.25 7.5 6 7.5-6"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-item-label">Instagram</span>
+          <a class="contact-link" href="https://www.instagram.com/grounduprec" target="_blank" rel="noopener" aria-label="Ground Up Records Instagram">
+            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="4.5"></rect>
+              <circle cx="12" cy="12" r="4.1"></circle>
+              <circle class="is-filled" cx="17.4" cy="6.6" r="0.9" fill="#cfcfcf" stroke="none"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© Ground Up Records</div>
+  </footer>
+</body>
+</html>
